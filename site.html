@@ -1,0 +1,74 @@
+<head>
+	<title>Sams sandwich</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="site.css">
+</head>
+<body>
+	<h1>Sam's sandwich shop</h1>
+	<p></p>
+	<h2>Place your order here</h2>
+	<form name="order">
+		<h3>Sandwich</h3>
+		<label><input type="radio" name="bread length" value="6inch" data-price="6.99">6 Inch</label><br>
+		<label><input type="radio" name="bread length" value="12inch" data-price="12.50">12 Inch</label><br>
+
+		<h3>Bread</h3>
+		<label><input type="radio" name="bread type" value="White" data-price="0.00">White</label><br>
+		<label><input type="radio" name="bread type" value="Wholegrain" data-price="0.00">Wholegrain</label><br>
+		<label><input type="radio" name="bread type" value="Italian" data-price="0.99">Italian</label><br>
+		<label><input type="radio" name="bread type" value="Rye" data-price="0.99">Rye</label><br>
+		<label><input type="radio" name="bread type" value="Wrap" data-price="0.50">Wrap</label><br>
+		
+		<h3>Cheese</h3>
+		<label><input type="radio" name="cheese" value="Swiss">Swiss</label><br>
+		<label><input type="radio" name="cheese" value="Cheddar">Cheddar</label><br>
+		<label><input type="radio" name="cheese" value="Feta">Feta</label><br>
+		<label><input type="radio" name="cheese" value="No cheese">No cheese</label><br>
+
+		<h3>Meat</h3>
+		<label><input type="radio"  name="meat" value="Ham" data-price="0.00">Ham</label><br>
+		<label><input type="radio" name="meat" value="Tuna" data-price="0.00">Tuna</label><br>
+		<label><input type="radio" name="meat" value="Turkey" data-price="0.50">Turkey</label><br>
+		<label><input type="radio" name="meat" value="Salami" data-price="0.50">Salami</label><br>
+		<label><input type="radio" name="meat" value="Meatball" data-price="0.99">Meatball</label><br>
+		<label><input type="radio" name="meat" value="Chicken" data-price="1.50">Chicken</label><br>
+
+		<h3>Salads</h3>
+		<label><input type="checkbox" value="Lettuce">Lettuce</label><br>
+		<label><input type="checkbox" value="Tomatoes">Tomatoes</label><br>
+		<label><input type="checkbox" value="Carrot">Carrot</label><br>
+		<label><input type="checkbox" value="Cucumber">Cucumber</label><br>
+		<label><input type="checkbox" value="Capsicum">Capsicum</label><br>
+
+		<button type="reset">Reset</button>
+	</form>
+
+
+	<h2>Order Summary</h2>
+	<div id="orderOutput"></div>
+
+	<h2>Your Details</h2>
+	<div id="outputError"></div><br>
+	<label>Your name: <input type="text" id="name" placeholder="Your name" pattern="[a-zA-Z]\w{1,20}"></label><br>
+	<label>Your cellphone number: <input type="text" id="cellphone" placeholder="Your cellphone number" pattern="02[0-9]\d{6,8}"></label><br>
+	<input type="button" value="submit" id="submit_button" onclick="validate();">
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase.js"></script>
+
+	<script>
+	  // Your web app's Firebase configuration
+	  var firebaseConfig = {
+	    apiKey: "AIzaSyA6EieFbSjBQ5zTnRVACpqRexJkL0QdCvk",
+	    authDomain: "sandwich-512e8.firebaseapp.com",
+	    databaseURL: "https://sandwich-512e8.firebaseio.com",
+	    projectId: "sandwich-512e8",
+	    storageBucket: "sandwich-512e8.appspot.com",
+	    messagingSenderId: "343235781469",
+	    appId: "1:343235781469:web:093bf381ad1e13f5f17eb4"
+	  };
+	  // Initialize Firebase
+	  firebase.initializeApp(firebaseConfig);
+	</script>
+
+	<script src="site.js"></script>
+</body>
