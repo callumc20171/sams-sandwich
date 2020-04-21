@@ -23,10 +23,10 @@ function loopForm(form, name, phone) {
 
 	price = Math.round(price * 100)/100;
 	sandwichOrder["price"] = price;
-	orderOutput.innerHTML = "";
+	OrderOutput.innerHTML = "";
 
 	for (let key of Object.keys(sandwichOrder)) {
-		orderOutput.innerHTML += key + " : " + sandwichOrder[key] + "<br>";
+		OrderOutput.innerHTML += key + " : " + sandwichOrder[key] + "<br>";
 	}
 	sandwichOrder["phone"] = phone;
 
@@ -40,16 +40,16 @@ function loopForm(form, name, phone) {
 
 function validate() {
 	if (name.value == "" || cellphone.value == "") {
-		outputError.innerHTML = "Pleae fill in this form";
+		OutputError.innerHTML = "Pleae fill in this form";
 		return;
 	}
 	if (document.getElementById("name").validity.valid && document.getElementById("cellphone").validity.valid) {
-		outputError.innerHTML = "";
+		OutputError.innerHTML = "";
 		loopForm(document.getElementById("order"),
 		 document.getElementById("name").value, 
 		 document.getElementById("cellphone").value);
 
 	} else {
-		outputError.innerHTML = "Please fill in this form correctly";
+		OutputError.innerHTML = "Please fill in this form correctly";
 	}
 }

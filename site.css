@@ -13,6 +13,20 @@ label {
 	padding: 18px;
 }
 
+button, input[type=submit], input[type=button]{
+	padding: 18px;
+	text-align: center;
+	color: #6F2232;
+	background-color: #1A1A1D;
+	border-radius: 5px;
+	border: 2px #6F2232 solid;
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 12px;
+	display: block;
+}
+
 .title {
 
 }
@@ -34,7 +48,7 @@ label {
 	border: none;
 	outline: none;  
 	transition: max-height 0.2s ease-out;
-	display: list-item;
+	display: block;
 	margin: auto;
 	margin-bottom: 12px;
 	margin-top: 12px;
@@ -47,10 +61,22 @@ label {
 }
 
 .panel {
-	background-color: white;
-	display: none;
-	overflow: hidden;
+	background-color: #4E4E50;
+	color: #6F2232;
+	cursor: pointer;
+	padding: 18px;
 	width: 40%;
+	text-align: center;
+	font-size: 24px;
+	border: none;
+	outline: none;  
+	transition: max-height 0.2s ease-out;
+	display: none;
+	margin: auto;
+	margin-bottom: 12px;
+	border-radius: 5px;
+	border: 2px #6F2232 solid;
+	
 }
 
 #Header {
@@ -66,7 +92,7 @@ label {
  	top: 0%;
 }
 
-#Main {
+.section {
 	background-color: #4E4E50;
 	border-radius: 10px;
 	width: 60%;
@@ -76,7 +102,7 @@ label {
  	border: 2px #6F2232 solid;
 }
 
-#OrderTitle {
+.title {
 	padding: 18px;
 	text-align: center;
 	color: #6F2232;
@@ -87,3 +113,4 @@ label {
 	margin-left: auto;
 	margin-right: auto;
 }
+
