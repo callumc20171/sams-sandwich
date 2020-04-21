@@ -1,0 +1,82 @@
+body {
+	background-color: #1A1A1D;
+	font-family: "Roboto", sans-serif;
+}
+
+h1 {
+	text-align: center;
+	color: #6F2232;
+	margin: 0px;
+}
+
+h2 {
+	padding: 18px;
+	text-align: center;
+}
+
+label {
+	padding: 18px;
+}
+
+.title {
+
+}
+
+.orderInput {
+	padding: 18px;
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+
+.accordion {
+	background-color: #1A1A1D;
+	color: #6F2232;
+	cursor: pointer;
+	padding: 18px;
+	width: 40%;
+	text-align: center;
+	font-size: 24px;
+	border: none;
+	outline: none;  
+	transition: max-height 0.2s ease-out;
+	display: list-item;
+	margin: auto;
+	margin-bottom: 12px;
+	margin-top: 12px;
+	border-radius: 5px;
+	border: 2px #6F2232 solid;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.panel {
+	background-color: white;
+	display: none;
+	overflow: hidden;
+	width: 40%;
+}
+
+#Header {
+	background-color: #4E4E50;
+	width: 50%;
+	height: 5%;
+	position: fixed;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 10px;
+	border: 2px #6F2232 solid;
+ 	left: 25%;
+ 	top: 0%;
+}
+
+#Main {
+	background-color: #4E4E50;
+	border-radius: 10px;
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 4%;
+ 	border: 2px #6F2232 solid;
+}

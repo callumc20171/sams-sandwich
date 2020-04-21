@@ -3,7 +3,7 @@ var database = firebase.database();
 function loopForm(form, name, phone) {
 	var price = Number(0);
 	var sandwichOrder = {salad : []};
-	for (let child of form.elements) {
+	for (let child of document.getElementsByClassName("orderInput")) {
 		if (child.type == "radio") {
 			if (child.checked) {
 				sandwichOrder[child.name] = child.value;
@@ -33,7 +33,7 @@ function loopForm(form, name, phone) {
 
 	//Write to firebase
 
-	database.ref("sandwiches/"+name).set(sandwichOrder);
+	//database.ref("sandwiches/"+name).set(sandwichOrder);
 
 
 }
@@ -45,7 +45,7 @@ function validate() {
 	}
 	if (document.getElementById("name").validity.valid && document.getElementById("cellphone").validity.valid) {
 		outputError.innerHTML = "";
-		loopForm(document.order,
+		loopForm(document.getElementById("order"),
 		 document.getElementById("name").value, 
 		 document.getElementById("cellphone").value);
 
