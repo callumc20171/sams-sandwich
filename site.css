@@ -9,11 +9,6 @@ h1 {
 	margin: 0px;
 }
 
-h2 {
-	padding: 18px;
-	text-align: center;
-}
-
 label {
 	padding: 18px;
 }
@@ -79,4 +74,16 @@ label {
 	margin-right: auto;
 	margin-top: 4%;
  	border: 2px #6F2232 solid;
+}
+
+#OrderTitle {
+	padding: 18px;
+	text-align: center;
+	color: #6F2232;
+	background-color: #1A1A1D;
+	border-radius: 5px;
+	border: 2px #6F2232 solid;
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
 }
