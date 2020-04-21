@@ -54,21 +54,21 @@
 				<label><input type="checkbox" class="orderInput" value="Capsicum">Capsicum</label><br>
 			</div>
 
-			<button type="reset">Reset</button>
+			<button type="reset" onclick="resetForm();">Reset</button>
 		</div>
 	</div>
 
-	<div id="OrderSummary" class="section">
+	<div id="OrderSummary" class="section" style="display: none;">
 		<h2 class="title">Order Summary</h2>
 		<div id="OrderOutput"></div>
 	</div>
 	<div id="PersonalForm" class="section">
 
 		<h2 class="title">Your Details</h2>
-		<div id="OutputError"></div><br>
-		<label>Your name: <input type="text" id="name" placeholder="Your name" pattern="[a-zA-Z]\w{1,20}"></label><br>
-		<label>Your cellphone number: <input type="text" id="cellphone" placeholder="Your cellphone number" pattern="02[0-9]\d{6,8}"></label><br>
-		<input type="button" value="submit"  onclick="validate();">
+		<div id="OutputError" class="title"></div><br>
+		<label class="title">Your name: <input type="text" id="name" placeholder="Your name" pattern="[a-zA-Z]\w{1,20}"></label><br>
+		<label class="title">Your cellphone number: <input type="text" id="cellphone" placeholder="Your cellphone number" pattern="02[0-9]\d{6,8}"></label><br>
+		<input type="button" value="Submit"  onclick="validate();">
 	</div>
 	<!-- The core Firebase JS SDK is always required and must be listed first -->
 	<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase.js"></script>

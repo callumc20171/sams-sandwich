@@ -28,6 +28,9 @@ function loopForm(form, name, phone) {
 	for (let key of Object.keys(sandwichOrder)) {
 		OrderOutput.innerHTML += key + " : " + sandwichOrder[key] + "<br>";
 	}
+
+	OrderSummary.style.display = "block";
+
 	sandwichOrder["phone"] = phone;
 
 
@@ -40,7 +43,8 @@ function loopForm(form, name, phone) {
 
 function validate() {
 	if (name.value == "" || cellphone.value == "") {
-		OutputError.innerHTML = "Pleae fill in this form";
+		OutputError.innerHTML = "Please fill in this form";
+		OutputError.style.display = "block";
 		return;
 	}
 	if (document.getElementById("name").validity.valid && document.getElementById("cellphone").validity.valid) {
@@ -48,8 +52,18 @@ function validate() {
 		loopForm(document.getElementById("order"),
 		 document.getElementById("name").value, 
 		 document.getElementById("cellphone").value);
+		OutputError.style.display = "none";
 
 	} else {
 		OutputError.innerHTML = "Please fill in this form correctly";
+		OutputError.style.display = "block";
+	}
+}
+
+function resetForm() {
+	for (let child of document.getElementsByClassName("orderInput")) {
+		if (child.checked) {
+			child.checked = false;
+		}
 	}
 }
