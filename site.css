@@ -44,6 +44,10 @@ input[type=text] {
 	padding: 12px;
 }
 
+input:invalid {
+	background-color: #C3073F;
+}
+
 .title {
 
 }

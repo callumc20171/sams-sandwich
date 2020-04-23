@@ -36,7 +36,7 @@ function loopForm(form, name, phone) {
 
 	//Write to firebase
 
-	//database.ref("sandwiches/"+name).set(sandwichOrder);
+	database.ref("sandwiches/"+name).set(sandwichOrder);
 
 
 }
